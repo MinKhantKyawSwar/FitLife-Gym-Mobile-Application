@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Exercise"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Exercise Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise Name:"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/exerciseNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter exercise name"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Equipments Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipments"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipment 1:"
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/equipment1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter equipment"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipment 2:"
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/equipment2EditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter equipment"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/addNewEquipmentBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Add New Equipment"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_dark_grey_rounded"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Image Upload Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:id="@+id/imageUploadArea"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#F5F5F5"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_marginBottom="24dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/uploadIcon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_upload"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload image"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark_secondary" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/exerciseImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#F5F5F5"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Sets and Repetitions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sets and Repetitions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set:"
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/setsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter sets"
+            android:inputType="number"
+            android:maxLines="1"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reps:"
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/repsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter reps"
+            android:inputType="number"
+            android:maxLines="1"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rest Time:"
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/restTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter rest time (seconds)"
+            android:inputType="number"
+            android:maxLines="1"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Exercise Instructions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise Instructions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/instruction1EditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter instruction"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2."
+            android:textSize="14sp"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/instruction2EditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/input_field_rounded"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_primary"
+            android:hint="Enter instruction"
+            android:inputType="textCapSentences"
+            android:maxLines="1"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/addNewInstructionsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Add New Instructions"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_dark_grey_rounded"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Create New Exercise Button -->
+        <Button
+            android:id="@+id/saveExerciseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Create New Exercise"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_dark_grey_rounded" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme Colors -->
+    <color name="primary_orange">#FFA726</color>
+    <color name="primary_light_orange">#FFB74D</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="text_dark_primary">#212121</color>
+    <color name="text_dark_secondary">#757575</color>
+    
+    <!-- Legacy colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Button colors -->
+    <color name="button_dark_grey">#424242</color>
+    
+    <!-- Navigation colors -->
+    <color name="nav_background_active">#3C3C3C</color>
+    <color name="nav_background_inactive">#505050</color>
+    <color name="nav_icon_color">#FFFFFF</color>
+    <color name="nav_text_color">#FFFFFF</color>
+    <color name="nav_play_circle">#A080C0</color>
+</resources>

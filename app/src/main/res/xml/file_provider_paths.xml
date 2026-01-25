@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- External files directory for exercise images -->
+    <external-files-path 
+        name="exercise_images" 
+        path="Pictures/ExerciseImages/" />
+    
+    <!-- External files directory for temporary camera files -->
+    <external-files-path 
+        name="camera_temp" 
+        path="Pictures/" />
+    
+    <!-- External cache directory for temporary processing -->
+    <external-cache-path 
+        name="temp_images" 
+        path="/" />
+</paths>

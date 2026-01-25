@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_white">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workouts"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_dark_primary"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Workout List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/routinesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Create new Routine Button -->
+    <Button
+        android:id="@+id/createRoutineBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Create new Routine"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_dark_grey_rounded"
+        android:layout_margin="20dp" />
+
+</LinearLayout>

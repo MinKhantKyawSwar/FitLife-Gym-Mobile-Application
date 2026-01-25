@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Workout Name -->
+        <TextView
+            android:id="@+id/workoutNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Body Stretchout Workout"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark_primary"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Exercise Count -->
+        <TextView
+            android:id="@+id/exerciseCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Exercises"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Exercises List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/exercisesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Add to Week Button -->
+        <Button
+            android:id="@+id/addToWeekBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Add to This Week"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_dark_grey_rounded" />
+
+    </LinearLayout>
+
+</ScrollView>
