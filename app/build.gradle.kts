@@ -39,18 +39,9 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     
-    // Navigation components
-    implementation(libs.navigation.fragment)
-    implementation(libs.navigation.ui)
-    
-    // ViewPager2 for intro
-    implementation(libs.viewpager2)
-    
-    // Image handling
-    implementation(libs.glide)
-    
-    // Date and time formatting
-    implementation(libs.threetenbp)
+    // RecyclerView and CardView for lists and cards
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.cardview:cardview:1.0.0")
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

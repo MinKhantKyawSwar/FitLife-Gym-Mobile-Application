@@ -1,11 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="BottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
-        <item name="backgroundTint">@color/nav_background_inactive</item>
-        <item name="itemIconTint">@color/nav_icon_color</item>
-        <item name="itemTextColor">@color/nav_text_color</item>
-        <item name="itemRippleColor">@android:color/transparent</item>
-        <item name="itemBackground">@drawable/bottom_nav_item_background</item>
-        <item name="android:textSize">12sp</item>
+    <!-- Typography (scalable, accessible contrast) -->
+    <style name="TextAppearance.FitLife.HeadingLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+    <style name="TextAppearance.FitLife.HeadingMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+    <style name="TextAppearance.FitLife.BodyPrimary" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+    <style name="TextAppearance.FitLife.BodySecondary" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+    <style name="TextAppearance.FitLife.LinkText" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorSecondaryBlue</item>
+    </style>
+
+    <!-- Primary button: green CTA (Start, Save, Confirm) -->
+    <style name="Widget.FitLife.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/colorOnPrimaryGreen</item>
+        <item name="backgroundTint">@color/colorPrimaryGreen</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <!-- Secondary button: blue outline (View Details, Edit, Progress) -->
+    <style name="Widget.FitLife.Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorSecondaryBlue</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/colorSecondaryBlue</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <!-- Danger button -->
+    <style name="Widget.FitLife.Button.Danger" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/error</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:minHeight">48dp</item>
     </style>
 </resources>

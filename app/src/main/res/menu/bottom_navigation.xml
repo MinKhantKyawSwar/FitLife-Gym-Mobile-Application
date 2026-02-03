@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/nav_my_workouts"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="@string/my_workouts" />
+    <item
+        android:id="@+id/nav_create"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="@string/create" />
+    <item
+        android:id="@+id/nav_workouts"
+        android:icon="@android:drawable/btn_star"
+        android:title="@string/workouts" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="@string/profile" />
+</menu>

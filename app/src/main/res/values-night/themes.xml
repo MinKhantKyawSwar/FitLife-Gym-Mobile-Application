@@ -1,7 +1,20 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.FitLife" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    <!-- Same dark theme for night (consistent dark app) -->
+    <style name="Base.Theme.FitLife" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorOnPrimary">@color/colorOnPrimaryGreen</item>
+        <item name="colorSecondary">@color/colorSecondaryBlue</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/colorBorder</item>
+        <item name="colorOnPrimaryContainer">@color/colorTextPrimary</item>
+        <item name="android:colorBackground">@color/colorBackgroundPrimary</item>
+        <item name="colorOnBackground">@color/colorTextPrimary</item>
+        <item name="colorSurface">@color/colorBackgroundCard</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
+        <item name="colorSurfaceVariant">@color/colorBackgroundCard</item>
+        <item name="colorOnSurfaceVariant">@color/colorTextSecondary</item>
+        <item name="android:statusBarColor">@color/colorBackgroundPrimary</item>
+        <item name="android:navigationBarColor">@color/colorBackgroundPrimary</item>
+        <item name="colorOutline">@color/colorBorder</item>
     </style>
 </resources>

@@ -1,3 +1,163 @@
 <resources>
     <string name="app_name">FitLife</string>
+    
+    <!-- Splash Screen -->
+    <string name="welcome_to">Welcome To</string>
+    <string name="tagline">Your Personal Fitness Companion</string>
+    
+    <!-- Login/Register -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="sign_in_continue">Sign in to continue your fitness journey</string>
+    <string name="username_or_email">Username or email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create Account</string>
+    <string name="join_fitlife">Join FitLife and start your fitness journey today</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account">Already Have an account? Log in</string>
+    
+    <!-- Add Details -->
+    <string name="add_detail_informations">Add Detail Informations</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="years">years</string>
+    <string name="cm">cm</string>
+    <string name="kg">kg</string>
+    <string name="save">Save</string>
+    
+    <!-- Home -->
+    <string name="hi_user">Hi, %1$s!</string>
+    <string name="challenge_limits">It\'s Time To Challenge Your Limits</string>
+    <string name="create_new_workout">Create New Workout</string>
+    <string name="check_workout_list">Check Workout List</string>
+    <string name="check_exercises_list">Check Exercises List</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="see_all">See All</string>
+    <string name="share_workouts">Share Your Workouts To Your Friends With A Single Click!</string>
+    <string name="view_more">View More&gt;</string>
+    <string name="your_current_workouts">Your Current Workouts</string>
+    <string name="completed">Completed</string>
+    <string name="pending">Pending</string>
+    <string name="exercises">Exercises</string>
+    <string name="no_exercises">No exercises yet. Create one to get started.</string>
+    <string name="no_workouts">No workout routines yet. Create one to get started.</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="my_workouts">My Workouts</string>
+    <string name="create">Create</string>
+    <string name="workouts">Workouts</string>
+    <string name="profile">Profile</string>
+    
+    <!-- My Workouts -->
+    <string name="current_workouts">Current Workouts</string>
+    <string name="workout_name">Full Body Stretching Workouts</string>
+    <string name="set_reps">Set : %1$d, Reps: %2$s</string>
+    <string name="swipe_right_complete">Swipe Right to set as completed</string>
+    <string name="swipe_left_delete">Swipe Left to delete</string>
+    <string name="shake_reset">Shake to reset the routine</string>
+    <string name="no_current_workouts">You Don\'t Have Any Current Workouts.\nPlease Choose One In My Workouts Tab.</string>
+    <string name="delete_current_workout">Delete current workout</string>
+    <string name="delete_current_workout_confirm">Remove this workout from your current workouts?</string>
+    
+    <!-- Create -->
+    <string name="create_workout_routine">Create Workout Routine</string>
+    <string name="create_new_exercise">Create New Exercise</string>
+    
+    <!-- Create Workout -->
+    <string name="create_workout_routine_title">Create Workout Routine</string>
+    <string name="workout_name_label">Workout Name:</string>
+    <string name="add_existing_exercises">Add Existing Exercises</string>
+    <string name="create_new_workout_button">Create New Workout</string>
+    
+    <!-- Create Exercise -->
+    <string name="create_exercise">Create Exercise</string>
+    <string name="exercise_name">Exercise Name:</string>
+    <string name="equipments">Equipments</string>
+    <string name="equipment">Equipment %1$d:</string>
+    <string name="add_new_equipment">Add New Equipment</string>
+    <string name="upload_image">Upload image</string>
+    <string name="sets_and_repetitions">Sets and Repetitions</string>
+    <string name="set">Set:</string>
+    <string name="reps">Reps:</string>
+    <string name="rest_time">Rest Time:</string>
+    <string name="exercise_instructions">Exercise Instructions</string>
+    <string name="instruction">%1$d.</string>
+    <string name="add_new_instructions">Add New Instructions</string>
+    <string name="create_new_exercise_button">Create New Exercise</string>
+    <string name="exercise_details">Exercise Details</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="delete">Delete</string>
+    
+    <!-- Add Exercise -->
+    <string name="add_existing_exercise">Add Existing Exercise</string>
+    <string name="add_to_workout_routine">Add to Workout routine</string>
+    
+    <!-- Workouts -->
+    <string name="workouts_title">Workouts</string>
+    <string name="workout_routines">Workout Routines</string>
+    <string name="create_new_routine">Create new Routine</string>
+    <string name="share">Share</string>
+    <string name="tap_for_more_details">Tap For More Details</string>
+    <string name="view_details">View Details</string>
+    <string name="play_workout">Play workout</string>
+    <string name="set_as_current_workout_question">Do you want to set this workout as current exercise?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="share_workout_to_friend">Share this workout with a friend</string>
+    <string name="enter_phone_number">Enter friend\'s phone number</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Workout Detail -->
+    <string name="add_existing_exercise_button">Add Existing Exercise</string>
+    <string name="start_workout">Start Workout</string>
+    <string name="delete_workout">Delete workout</string>
+    <string name="delete_workout_confirm">Delete this workout? This cannot be undone.</string>
+    <string name="remove_exercise_from_workout_confirm">Remove this exercise from the workout?</string>
+    <string name="delete_exercise_confirm">Delete this exercise from the app? This cannot be undone.</string>
+    
+    <!-- Exercise Detail -->
+    <string name="exercise_instructions_title">Exercise Instructions</string>
+    
+    <!-- Profile -->
+    <string name="age_label">Age</string>
+    <string name="gender_label">Gender</string>
+    <string name="height_label">Height</string>
+    <string name="weight_label">Weight</string>
+    <string name="overall_stats">Overall Stats</string>
+    <string name="total_workout_sessions">Total Completed Sessions</string>
+    <string name="total_routines_created">Total routines created</string>
+    <string name="total_exercises_performed">Total exercises performed</string>
+    <string name="active_days_count">Active days count</string>
+    <string name="edit">Edit</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Edit Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    
+    <!-- Messages -->
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="invalid_input">Please fill in all required fields</string>
+    <string name="password_mismatch">Passwords do not match</string>
+    <string name="user_exists">User already exists</string>
+    <string name="invalid_credentials">Invalid username or password</string>
+    <string name="registration_success">Registration successful</string>
+    <string name="workout_created">Workout created successfully</string>
+    <string name="exercise_created">Exercise created successfully</string>
+    <string name="workout_deleted">Workout deleted</string>
+    <string name="exercise_deleted">Exercise deleted</string>
+    <string name="exercise_updated">Exercise updated</string>
+    <string name="workout_updated">Workout updated</string>
+    <string name="workout_started">Workout started</string>
+    <string name="workout_completed">Workout marked as completed</string>
+    <string name="workout_reset">Workout session reset</string>
+    <string name="profile_updated">Profile updated successfully</string>
 </resources>

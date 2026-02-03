@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Light Theme Colors -->
-    <color name="primary_orange">#FFA726</color>
-    <color name="primary_light_orange">#FFB74D</color>
-    <color name="background_white">#FFFFFF</color>
-    <color name="surface_white">#FFFFFF</color>
-    <color name="text_dark_primary">#212121</color>
-    <color name="text_dark_secondary">#757575</color>
-    
-    <!-- Legacy colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    
-    <!-- Button colors -->
-    <color name="button_dark_grey">#424242</color>
-    
-    <!-- Navigation colors -->
-    <color name="nav_background_active">#3C3C3C</color>
-    <color name="nav_background_inactive">#505050</color>
-    <color name="nav_icon_color">#FFFFFF</color>
-    <color name="nav_text_color">#FFFFFF</color>
-    <color name="nav_play_circle">#A080C0</color>
+
+    <!-- Dark theme – primary palette -->
+    <color name="colorBackgroundPrimary">#0B0F14</color>
+    <color name="colorBackgroundCard">#111827</color>
+    <color name="colorPrimaryGreen">#22C55E</color>
+    <color name="colorSecondaryBlue">#3B82F6</color>
+    <color name="colorBlueDark">#1E40AF</color>
+    <color name="colorTextPrimary">#F9FAFB</color>
+    <color name="colorTextSecondary">#9CA3AF</color>
+    <color name="colorBorder">#1F2937</color>
+
+    <!-- Semantic -->
+    <color name="success">#16A34A</color>
+    <color name="info">#38BDF8</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+
+    <!-- Legacy aliases (for existing layouts) -->
+    <color name="background">#0B0F14</color>
+    <color name="card_background">#111827</color>
+    <color name="text_primary">#F9FAFB</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="primary">#111827</color>
+    <color name="primary_dark">#1F2937</color>
+    <color name="accent">#22C55E</color>
+    <color name="surface">#111827</color>
+    <color name="divider">#1F2937</color>
+    <color name="completed">#22C55E</color>
+    <color name="pending">#F59E0B</color>
+    <color name="gray_placeholder">#1F2937</color>
+
+    <!-- Bottom nav: inactive -->
+    <color name="colorNavInactive">#6B7280</color>
+
+    <!-- Stats (dark cards, blue accent) -->
+    <color name="stats_card_background">#111827</color>
+    <color name="stats_card_title">#F9FAFB</color>
+    <color name="stats_card_label">#3B82F6</color>
+    <color name="stats_card_value">#F9FAFB</color>
+
+    <!-- Edit profile / toolbars -->
+    <color name="edit_profile_background">#0B0F14</color>
+    <color name="edit_profile_button_bg">#1F2937</color>
+    <color name="edit_profile_button_text">#F9FAFB</color>
+
+    <!-- Workouts / surfaces -->
+    <color name="workouts_page_background">#0B0F14</color>
+    <color name="workouts_card_border">#1F2937</color>
+
+    <!-- Primary button text on green -->
+    <color name="colorOnPrimaryGreen">#022C22</color>
 </resources>
