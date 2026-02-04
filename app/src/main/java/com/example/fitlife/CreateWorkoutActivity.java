@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -51,6 +52,14 @@ public class CreateWorkoutActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.create_workout_routine_title);
+        }
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         inputLayoutWorkoutName = findViewById(R.id.inputLayoutWorkoutName);
         editTextWorkoutName = findViewById(R.id.editTextWorkoutName);
         recyclerViewExercises = findViewById(R.id.recyclerViewExercises);

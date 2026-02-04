@@ -43,11 +43,21 @@ public class CurrentWorkoutExerciseAdapter extends RecyclerView.Adapter<CurrentW
         holder.textSetsReps.setText("Set : " + exercise.sets + ", Reps: " + exercise.reps);
         holder.textStatus.setText(exercise.status);
 
-        // Change background color if completed
+        int white = holder.itemView.getContext().getResources().getColor(R.color.white);
+        int textPrimary = holder.itemView.getContext().getResources().getColor(R.color.text_primary);
+        int textSecondary = holder.itemView.getContext().getResources().getColor(R.color.text_secondary);
+
+        // Change background and text colors if completed
         if ("Completed".equals(exercise.status)) {
             holder.cardView.setCardBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.completed));
+            holder.textSetsReps.setTextColor(white);
+            holder.textExerciseName.setTextColor(white);
+            holder.textStatus.setTextColor(white);
         } else {
             holder.cardView.setCardBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.surface));
+            holder.textSetsReps.setTextColor(textSecondary);
+            holder.textExerciseName.setTextColor(textPrimary);
+            holder.textStatus.setTextColor(textPrimary);
         }
 
         holder.itemView.setOnClickListener(v -> {

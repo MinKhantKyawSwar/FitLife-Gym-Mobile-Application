@@ -7,35 +7,40 @@
     android:background="@color/background"
     tools:context=".CreateActivity">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonCreateWorkoutRoutine"
+    <LinearLayout
+        android:id="@+id/linearCreateButtons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/create_workout_routine"
-        android:textColor="@color/text_primary"
-        android:textSize="16sp"
-        app:cornerRadius="8dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonCreateNewExercise"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/create_new_exercise"
-        android:textColor="@color/text_primary"
-        android:textSize="16sp"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCreateWorkoutRoutine" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCreateWorkoutRoutine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/create_workout_routine"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCreateNewExercise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/create_new_exercise"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"

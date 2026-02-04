@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.example.fitlife.utils.ImageHelper;
 import java.util.List;
@@ -45,6 +46,14 @@ public class ExerciseDetailActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.exercise_details);
+        }
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         imageExercise = findViewById(R.id.imageExercise);
         textExerciseName = findViewById(R.id.textExerciseName);
         textEquipmentList = findViewById(R.id.textEquipmentList);

@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -74,7 +75,6 @@ public class CreateExerciseActivity extends AppCompatActivity {
 
         initializeViews();
         if (isEditMode) {
-            setTitle(R.string.exercise_details);
             buttonCreateExercise.setText(R.string.save_changes);
             buttonDeleteExercise.setVisibility(View.VISIBLE);
             buttonDeleteExercise.setOnClickListener(v -> showDeleteExerciseConfirm());
@@ -83,6 +83,14 @@ public class CreateExerciseActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(isEditMode ? R.string.exercise_details : R.string.create_new_exercise);
+        }
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         inputLayoutExerciseName = findViewById(R.id.inputLayoutExerciseName);
         editTextExerciseName = findViewById(R.id.editTextExerciseName);
         layoutEquipments = findViewById(R.id.layoutEquipments);

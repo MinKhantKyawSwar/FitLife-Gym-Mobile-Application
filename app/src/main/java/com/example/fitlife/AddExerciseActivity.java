@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.button.MaterialButton;
 import com.example.fitlife.adapters.ExerciseSelectAdapter;
 import com.example.fitlife.models.Exercise;
@@ -75,6 +76,14 @@ public class AddExerciseActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(R.string.add_existing_exercises);
+        }
+        toolbar.setNavigationOnClickListener(v -> finish());
+
         recyclerViewExercises = findViewById(R.id.recyclerViewExercises);
         buttonAddToWorkout = findViewById(R.id.buttonAddToWorkout);
         buttonCreateNewExercise = findViewById(R.id.buttonCreateNewExercise);
