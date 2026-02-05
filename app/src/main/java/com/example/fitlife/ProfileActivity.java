@@ -131,12 +131,11 @@ public class ProfileActivity extends AppCompatActivity {
             int usernameIdx = accountCursor.getColumnIndex("username");
             String username = (usernameIdx >= 0) ? accountCursor.getString(usernameIdx) : null;
             textUserEmail.setText(email != null ? email : "");
-            textUserName.setText((username != null && !username.isEmpty()) ? username : (email != null ? email : ""));
+            textUserName.setText((username != null && !username.isEmpty()) ? username : "User");
         } else {
             String usernameEmail = sessionManager.getUsernameEmail();
-            textUserEmail.setText(usernameEmail);
-            textUserName.setText(usernameEmail != null && usernameEmail.contains("@")
-                    ? usernameEmail.substring(0, usernameEmail.indexOf("@")) : usernameEmail);
+            textUserEmail.setText(usernameEmail != null ? usernameEmail : "");
+            textUserName.setText("User");
         }
         if (accountCursor != null) {
             accountCursor.close();

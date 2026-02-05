@@ -229,10 +229,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // User operations
-    public long insertUser(String usernameEmail, String password) {
+    public long insertUser(String usernameEmail, String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COL_USERNAME_EMAIL, usernameEmail);
+        values.put(COL_USERNAME, username != null ? username : "");
         values.put(COL_PASSWORD, password);
         long userId = db.insert(TABLE_USERS, null, values);
         db.close();
@@ -268,6 +269,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return userId;
     }
 
+    /** Returns true if a user exists with this email (username_email). Used for login identifier. */
     public boolean userExists(String usernameEmail) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_USERS,
@@ -279,6 +281,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return exists;
+    }
+
+    /** Returns true if a display username is already taken. */
+    public boolean usernameTaken(String username) {
+        if (username == null || username.isEmpty()) return false;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_USERS,
+                new String[]{COL_USER_ID},
+                COL_USERNAME + "=?",
+                new String[]{username.trim()},
+                null, null, null);
+        boolean taken = cursor.getCount() > 0;
+        cursor.close();
+        db.close();
+        return taken;
     }
 
     // User details operations

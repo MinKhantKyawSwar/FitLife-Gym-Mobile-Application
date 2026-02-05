@@ -73,12 +73,9 @@ public class HomeActivity extends AppCompatActivity {
         textEmpty = findViewById(R.id.textEmpty);
         bottomNavigation = findViewById(R.id.bottomNavigation);
 
-        // Set greeting
-        String username = sessionManager.getUsernameEmail();
-        if (username != null && username.contains("@")) {
-            username = username.substring(0, username.indexOf("@"));
-        }
-        textGreeting.setText(getString(R.string.hi_user, username != null ? username : "User"));
+        // Set greeting from actual username in DB
+        String displayName = getDisplayNameFromDb();
+        textGreeting.setText(getString(R.string.hi_user, displayName));
 
         buttonCreateNewWorkout.setOnClickListener(v -> {
             startActivity(new Intent(HomeActivity.this, CreateWorkoutActivity.class));
@@ -119,6 +116,23 @@ public class HomeActivity extends AppCompatActivity {
         loadData();
     }
 
+    private String getDisplayNameFromDb() {
+        int userId = sessionManager.getUserId();
+        Cursor cursor = dbHelper.getAccountInfo(userId);
+        if (cursor != null && cursor.moveToFirst()) {
+            int usernameIdx = cursor.getColumnIndex("username");
+            String username = (usernameIdx >= 0) ? cursor.getString(usernameIdx) : null;
+            cursor.close();
+            if (username != null && !username.isEmpty()) {
+                return username;
+            }
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+        return "User";
+    }
+
     private void setupBottomNavigation() {
         bottomNavigation.setSelectedItemId(R.id.nav_home);
         bottomNavigation.setOnItemSelectedListener(item -> {
@@ -147,6 +161,10 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void loadData() {
+        // Refresh welcome with current username (from registration or profile)
+        if (textGreeting != null) {
+            textGreeting.setText(getString(R.string.hi_user, getDisplayNameFromDb()));
+        }
         loadRecommendations();
         loadCurrentWorkouts();
     }

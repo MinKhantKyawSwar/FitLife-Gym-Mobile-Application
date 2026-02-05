@@ -111,8 +111,14 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // Check if user already exists
-        if (dbHelper.userExists(username) || dbHelper.userExists(email)) {
+        // Check if email or display username is already taken
+        if (dbHelper.userExists(email)) {
+            inputLayoutEmail.setError("This email is already registered");
+            Toast.makeText(this, R.string.user_exists, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (dbHelper.usernameTaken(username)) {
+            inputLayoutUsername.setError("This username is already taken");
             Toast.makeText(this, R.string.user_exists, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -120,9 +126,8 @@ public class RegisterActivity extends AppCompatActivity {
         // Hash password
         String hashedPassword = PasswordHasher.hashPassword(password);
 
-        // Register user (use email as username_email in database, but store both username and email)
-        // For simplicity, we'll use email as the login identifier
-        long userId = dbHelper.insertUser(email, hashedPassword);
+        // Register using username, email, password from the form (email = login identifier, username = display name)
+        long userId = dbHelper.insertUser(email, username, hashedPassword);
         
         if (userId > 0) {
             // Initialize user stats
